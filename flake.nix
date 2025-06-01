@@ -198,12 +198,14 @@
         format = with pkgs.vimPlugins; [
           conform-nvim
         ];
-        markdown = with pkgs.vimPlugins; [
-          markdown-preview-nvim
-        ];
-        neonixdev = with pkgs.vimPlugins; [
-          lazydev-nvim
-        ];
+        language = with pkgs.vimPlugins; {
+          markdown = [
+            markdown-preview-nvim
+          ];
+          lua = [
+            lazydev-nvim
+          ];
+        };
         general = {
           blink = with pkgs.vimPlugins; [
             luasnip
@@ -222,11 +224,6 @@
             #     lua
             #   ]
             # ))
-          ];
-          telescope = with pkgs.vimPlugins; [
-            telescope-fzf-native-nvim
-            telescope-ui-select-nvim
-            telescope-nvim
           ];
           always = with pkgs.vimPlugins; [
             comment-nvim

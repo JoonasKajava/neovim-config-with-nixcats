@@ -5,6 +5,8 @@ require("myLuaConf.options")
 -- Set of universal utility functions for my Neovim configuration.
 _G.Utils = require("myLuaConf.utils")
 
+_G.Icons = require("myLuaConf.icons")
+--
 -- NOTE: register an extra lze handler with the spec_field 'for_cat'
 -- that makes enabling an lze spec for a category slightly nicer
 require("lze").register_handlers(require("nixCatsUtils.lzUtils").for_cat)

@@ -1,0 +1,75 @@
+local M = {
+	dap = {
+		Breakpoint = " ",
+		BreakpointCondition = " ",
+		BreakpointRejected = { " ", "DiagnosticError" },
+		LogPoint = ".>",
+		Stopped = { "󰁕 ", "DiagnosticWarn", "DapStoppedLine" },
+	},
+
+	diagnostics = {
+		Error = " ",
+		Hint = " ",
+		Info = " ",
+		Warn = " ",
+	},
+
+	ft = { octo = "" },
+
+	git = {
+		added = " ",
+		modified = " ",
+		removed = " ",
+	},
+
+	kinds = {
+		Array = " ",
+		Boolean = "󰨙 ",
+		Class = " ",
+		Codeium = "󰘦 ",
+		Collapsed = " ",
+		Color = " ",
+		Constant = "󰏿 ",
+		Constructor = " ",
+		Control = " ",
+		Copilot = " ",
+		Enum = " ",
+		EnumMember = " ",
+		Event = " ",
+		Field = " ",
+		File = " ",
+		Folder = " ",
+		Function = "󰊕 ",
+		Interface = " ",
+		Key = " ",
+		Keyword = " ",
+		Method = "󰊕 ",
+		Module = " ",
+		Namespace = "󰦮 ",
+		Null = " ",
+		Number = "󰎠 ",
+		Object = " ",
+		Operator = " ",
+		Package = " ",
+		Property = " ",
+		Reference = " ",
+		Snippet = "󱄽 ",
+		String = " ",
+		Struct = "󰆼 ",
+		Supermaven = " ",
+		TabNine = "󰏚 ",
+		Text = " ",
+		TypeParameter = " ",
+		Unit = " ",
+		Value = " ",
+		Variable = "󰀫 ",
+	},
+
+	misc = {
+		dots = "󰇘",
+		clock = " ",
+		debug = " ",
+	},
+}
+
+return M
