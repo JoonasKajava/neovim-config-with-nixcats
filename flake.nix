@@ -115,15 +115,25 @@
       # at RUN TIME for plugins. Will be available to PATH within neovim terminal
       # this includes LSPs
       lspsAndRuntimeDeps = {
-        # some categories of stuff.
+        lang = with pkgs; {
+          tailwind = [
+            tailwindcss-language-server
+          ];
+        };
         general = with pkgs; [
           ripgrep # searching inside files
           fd # searching for files
+          nodejs_latest # needed for copilot
+        ];
+        fzf = with pkgs; [
+          fzf
+          delta
         ];
         git = with pkgs; [
           lazygit
           git
         ];
+
         # these names are arbitrary.
         lint = with pkgs; [
         ];
@@ -154,7 +164,6 @@
             lzextras
             plenary-nvim
 
-            oil-nvim
             nvim-web-devicons
           ];
         };
@@ -167,7 +176,7 @@
             "onedark" = onedark-nvim;
             "catppuccin" = catppuccin-nvim;
             "catppuccin-mocha" = catppuccin-nvim;
-            "tokyonight" = tokyonight-nvim;
+            "tokyonight-moon" = tokyonight-nvim;
             "tokyonight-day" = tokyonight-nvim;
           }
         );
@@ -198,21 +207,28 @@
         format = with pkgs.vimPlugins; [
           conform-nvim
         ];
-        language = with pkgs.vimPlugins; {
+        fzf = with pkgs.vimPlugins; [
+          fzf-lua
+        ];
+        lang = with pkgs.vimPlugins; {
           markdown = [
             markdown-preview-nvim
           ];
           lua = [
             lazydev-nvim
           ];
+          tailwind = [
+            tailwind-tools-nvim
+          ];
         };
         general = {
           blink = with pkgs.vimPlugins; [
             luasnip
-            cmp-cmdline
             blink-cmp
             blink-compat
-            colorful-menu-nvim
+            blink-ripgrep-nvim
+            blink-copilot
+            copilot-lua
           ];
           treesitter = with pkgs.vimPlugins; [
             nvim-treesitter-textobjects
@@ -226,6 +242,7 @@
             # ))
           ];
           always = with pkgs.vimPlugins; [
+            oil-nvim
             comment-nvim
             nvim-lspconfig
             which-key-nvim
@@ -233,6 +250,15 @@
 
             lualine-nvim
             gitsigns-nvim
+            flash-nvim
+            grug-far-nvim # Search and replace project wide
+            nvim-navic
+            mini-icons
+            neogen # For generating annotations
+            tiny-inline-diagnostic-nvim
+            todo-comments-nvim
+            trouble-nvim
+            vim-wakatime # For tracking time spent in nvim
             #vim-sleuth
             #vim-fugitive
             #vim-rhubarb

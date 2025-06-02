@@ -1,30 +1,27 @@
 return {
 	{
 		"oil.nvim",
-		["after"] = function()
+		after = function()
 			require("oil").setup({
-				["default_file_explorer"] = true,
-				["view_options"] = {
-					["show_hidden"] = true,
+				default_file_explorer = true,
+				view_options = {
+					show_hidden = true,
 				},
 			})
 		end,
-		["cmd"] = { "Oil" },
-		["enabled"] = true,
-		["keys"] = {
+		cmd = { "Oil" },
+		enabled = true,
+		keys = {
 			{
 				"<leader>e",
 				":Oil<cr>",
-				["desc"] = "Open Oil file explorer",
-				["expr"] = false,
-				["mode"] = "n",
-				["noremap"] = true,
-				["nowait"] = false,
-				["script"] = false,
-				["silent"] = true,
-				["unique"] = true,
+				desc = "Open Oil file explorer",
+				mode = "n",
+				noremap = true,
+				silent = true,
+				unique = true,
 			},
 		},
-		["lazy"] = true,
+		lazy = true,
 	},
 }

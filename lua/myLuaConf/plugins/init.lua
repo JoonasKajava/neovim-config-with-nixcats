@@ -1,6 +1,6 @@
 local colorschemeName = nixCats("colorscheme")
 if not require("nixCatsUtils").isNixCats then
-	colorschemeName = "tokyonight"
+	colorschemeName = "tokyonight-moon"
 end
 
 vim.cmd.colorscheme(colorschemeName)
@@ -16,11 +16,25 @@ if ok then
 end
 
 require("lze").load({
+	{ import = "myLuaConf.plugins.coding.blink" },
 	{ import = "myLuaConf.plugins.coding.comment" },
+	{ import = "myLuaConf.plugins.coding.neogen" },
 	{ import = "myLuaConf.plugins.completion" },
+	{ import = "myLuaConf.plugins.editor.bufferline" },
+	{ import = "myLuaConf.plugins.editor.flash" },
+	{ import = "myLuaConf.plugins.editor.fzf" },
 	{ import = "myLuaConf.plugins.editor.gitsigns" },
+	{ import = "myLuaConf.plugins.editor.grug-far" },
+	{ import = "myLuaConf.plugins.editor.lualine" },
+	{ import = "myLuaConf.plugins.editor.mini-icons" },
 	{ import = "myLuaConf.plugins.editor.oil-nvim" },
-	{ import = "myLuaConf.plugins.telescope" },
+	{ import = "myLuaConf.plugins.editor.tiny-inline-diagnostic" },
+	{ import = "myLuaConf.plugins.editor.todo-comments" },
+	{ import = "myLuaConf.plugins.editor.trouble" },
+	{ import = "myLuaConf.plugins.editor.vim-wakatime" },
+
+	-- TODO: snacks undo
+
 	{ import = "myLuaConf.plugins.treesitter" },
 	{ import = "myLuaConf.plugins.util.startuptime" },
 	{ import = "myLuaConf.plugins.editor.which-key" },

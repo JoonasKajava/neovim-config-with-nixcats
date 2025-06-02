@@ -2,6 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.g.ai_cmp = true
+vim.g.editorconfig = true
+
 -- Auto format
 vim.g.autoformat = true
 

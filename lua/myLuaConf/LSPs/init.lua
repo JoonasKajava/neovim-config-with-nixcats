@@ -55,7 +55,7 @@ require("lze").load({
 	{
 		-- lazydev makes your lsp way better in your config without needing extra lsp configuration.
 		"lazydev.nvim",
-		for_cat = "language.lua",
+		for_cat = "lang.lua",
 		cmd = { "LazyDev" },
 		ft = "lua",
 		after = function(_)
@@ -69,7 +69,7 @@ require("lze").load({
 	{
 		-- name of the lsp
 		"lua_ls",
-		for_cat = "language.lua",
+		for_cat = "lang.lua",
 		-- provide a table containing filetypes,
 		-- and then whatever your functions defined in the function type specs expect.
 		-- in our case, it just expects the normal lspconfig setup options,
