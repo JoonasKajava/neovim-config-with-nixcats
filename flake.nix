@@ -259,6 +259,7 @@
             todo-comments-nvim
             trouble-nvim
             vim-wakatime # For tracking time spent in nvim
+            nvim-lspconfig
             #vim-sleuth
             #vim-fugitive
             #vim-rhubarb

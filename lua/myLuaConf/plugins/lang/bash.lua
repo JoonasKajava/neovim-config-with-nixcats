@@ -1,0 +1,4 @@
+return {
+	"bashls",
+	event = "LspAttach",
+}

@@ -32,6 +32,7 @@ require("lze").load({
 	{ import = "myLuaConf.plugins.editor.todo-comments" },
 	{ import = "myLuaConf.plugins.editor.trouble" },
 	{ import = "myLuaConf.plugins.editor.vim-wakatime" },
+	{ import = "myLuaConf.plugins.lsp" },
 
 	-- TODO: snacks undo
 
